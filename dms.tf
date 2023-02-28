@@ -65,9 +65,9 @@ resource "aws_dms_endpoint" "mssql-source" {
   engine_name                 = "sqlserver"
   extra_connection_attributes = "SetUpMsCdcForTables=true;ignoreMsReplicationEnablement=true;"
 
-  server_name   = "54.204.96.11"
-  username      = "SA"
-  password      = "Root@1234"
+  server_name   = ""
+  username      = ""
+  password      = ""
   port          = 1433
   database_name = "source"
   ssl_mode      = "none"
@@ -85,9 +85,9 @@ resource "aws_dms_endpoint" "mssql-target" {
   engine_name                 = "sqlserver"
   extra_connection_attributes = "UseBCPFullLoad=true"
 
-  server_name   = "35.171.129.117"
-  username      = "SA"
-  password      = "Root@1234"
+  server_name   = ""
+  username      = ""
+  password      = ""
   port          = 1433
   database_name = "target"
   ssl_mode      = "none"
